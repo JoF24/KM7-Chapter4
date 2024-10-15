@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "nama": "Joe Ferdinan",
+    "panggilan": "Joe",
+    "nim": 1026,
+    "kelas": "FSW-1",
+    "alamat": {
+      "provinsi": "Jawa Timur",
+      "kota": "Jember"
+    },
+    "pendidikan": {
+      "universitas": "UNEJ"
+    }
+  },
+  {
+    "id": 2,
+    "nama": "Siapa ya",
+    "panggilan": "Sapa",
+    "nim": 1026,
+    "kelas": "FSW-1",
+    "alamat": {
+      "provinsi": "Jawa Barat",
+      "kota": "Bandung"
+    },
+    "pendidikan": {
+      "universitas": "ITB"
+    }
+  },
+  {
+    "id": 3,
+    "nama": "Coba - Coba",
+    "panggilan": "Cob",
+    "nim": 1026,
+    "kelas": "FSW-1",
+    "alamat": {
+      "provinsi": "Jawa Timur",
+      "kota": "Surabaya"
+    },
+    "pendidikan": {
+      "universitas": "ITS"
+    }
+  },
+  {
+    "id": 4,
+    "nama": "Apalagi",
+    "panggilan": "Apa",
+    "nim": 1026,
+    "kelas": "FSW-1",
+    "alamat": {
+      "provinsi": "Jawa Timur",
+      "kota": "Malang"
+    },
+    "pendidikan": {
+      "universitas": "Universitas Malang"
+    }
+  },
+  {
+    "id": 5,
+    "nama": "Siapa aja",
+    "panggilan": "Sia",
+    "nim": 1026,
+    "kelas": "FSW-1",
+    "alamat": {
+      "provinsi": "Bali",
+      "kota": "Bali"
+    },
+    "pendidikan": {
+      "universitas": "Universitas Bali"
+    }
+  },
+  {
+    "id": 6,
+    "nama": "Data Baru",
+    "panggilan": "Daba",
+    "nim": 1031,
+    "kelas": "FSW-2",
+    "alamat": {
+      "provinsi": "Jawa Timur",
+      "kota": "Malang"
+    },
+    "pendidikan": {
+      "universitas": "UM"
+    }
+  }
+]
