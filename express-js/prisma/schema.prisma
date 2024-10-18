@@ -9,27 +9,27 @@ datasource db {
 
 model classes {
   id          BigInt     @id @default(autoincrement())
-  class       String?    @db.VarChar(255)
-  description String?
+  class       String     @db.VarChar(255)
+  description String
   students    students[]
 }
 
 model students {
-  id              BigInt        @id @default(autoincrement())
-  name            String?       @db.VarChar(255)
-  nick_name       String?       @db.VarChar(255)
+  id              BigInt       @id @default(autoincrement())
+  name            String       @db.VarChar(255)
+  nick_name       String       @db.VarChar(255)
   profile_picture String?
-  class_id        BigInt?
-  university_id   BigInt?
-  classes         classes?      @relation(fields: [class_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  universities    universities? @relation(fields: [university_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  class_id        BigInt
+  university_id   BigInt
+  classes         classes      @relation(fields: [class_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  universities    universities @relation(fields: [university_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model universities {
   id          BigInt     @id @default(autoincrement())
-  name        String?    @db.VarChar(255)
-  description String?
-  city        String?    @db.VarChar(255)
-  country     String?    @db.VarChar(255)
+  name        String     @db.VarChar(255)
+  description String
+  city        String     @db.VarChar(255)
+  country     String     @db.VarChar(255)
   students    students[]
 }

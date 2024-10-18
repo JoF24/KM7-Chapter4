@@ -1,7 +1,5 @@
-const fs = require("fs");
 const { PrismaClient } = require("@prisma/client");
 const JSONBigInt = require("json-bigint");
-const students = require("../data/student.json");
 
 const prisma = new PrismaClient();
 
@@ -76,7 +74,7 @@ exports.createStudent = async (data) => {
      const newStudent = await prisma.students.create({
          data: data_baru,
      });
-     
+
     // Convert BigInt fields to string for safe serialization (jika ada BigInt)
     const serializedStudents = JSONBigInt.stringify(newStudent);
     return JSONBigInt.parse(serializedStudents);
@@ -102,6 +100,10 @@ exports.updateStudent = async(id, data) => {
     // Lakukan update dengan data gabungan
     const updatedStudent = await prisma.students.update({
         where: { id: id },
+        include: {
+            classes: true,
+            universities: true,
+        },
         data: updatedData,
     });
 
@@ -123,6 +125,10 @@ exports.deleteStudentById = async(id) => {
     // Jika ditemukan, lakukan penghapusan dan simpan data yang dihapus
     const deletedStudent = await prisma.students.delete({
         where: { id: id },
+        include: {
+            classes: true,
+            universities: true,
+        },
     });
 
     // Convert BigInt fields to string for safe serialization (jika ada BigInt)
